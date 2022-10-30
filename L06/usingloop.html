@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Passing Arguments to Functions</title>
+		<title>Using Loop to Process File</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
@@ -19,7 +19,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">Passing Arguments to Functions</a></h1>
+							<h1><a href="index.html">Using Loop to Process File</a></h1>
 						</div>
 
 					<!-- Nav -->
@@ -34,7 +34,7 @@
 
 			<!-- Main -->
 				<section id="main" class="wrapper style2">
-					<div class="title">Passing Arguments to Functions</div>
+					<div class="title">Using Loop to Process File</div>
 					<div class="container">
 						<div class="row gtr-150">
 							<div class="col-4 col-12-medium">
@@ -43,15 +43,13 @@
 								<div id="sidebar">
 									<section class="box">
 										<header>
-											<h2>เนื้อหา Lecture 5</h2>
+											<h2>เนื้อหา Lecture 6</h2>
 										</header>
 										<ul class="style3">
-											<li class="current"><a href="introfunc.html">Introduction to Functions</a></li>
-											<li><a href="design.html">Designing Program Using Functions</a></li>
-											<li><a href="passing.html">Passing Arguments to Functions</a></li>
-											<li><a href="local.html">Local, Global Variables and Global Constants</a></li>
-											<li><a href="value.html">Value-Returning Functions</a></li>
-											<li><a href="storing.html">Storing Functions in Modules</a></li>
+											<li class="current"><a href="fileinput.html">File Input and Output</a></li>
+											<li><a href="usingloop.html">Using Loop to Process Files</a></li>
+											<li><a href="processingrec.html">Processing Records</a></li>
+											<li><a href="exceptions.html">Exceptions</a></li>
 										</ul>
 									</section>
 								</div>
@@ -63,18 +61,20 @@
 									<div id="content">
 										<article class="box post">
 											<header class="style1">
-											<h2>PASSING ARGUMENTS</h2>
+											<h2>DETECTING END OF FILE</h2>
 											</header>
 											<center class="row aln-center">
 											<a href="#" class="image featured">
-												<img src="/images/passing.jpeg" alt="" style="width:400px;height:400px;"/>
+												<img src="/images/detecting.jpeg" alt="" style="width:400px;height:400px;"/>
 											</a>
 											</center>
 											<p>
-												An argument is any piece of data that is passed into a function
-												when the function is called. A parameter is a variable that receives
-												an argument that is passed into a function.
-										
+												Open <br>
+												Use readline to read the first line form the file <br>
+												While the value returned from readline is not an empty string: <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;Process the item that was just read from the file <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;Use readline to read the next line from the file. <br>
+												Close the file
 											</p>
 										</article>
 										<div class="row gtr-150">

@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Value-Returning Functions</title>
+		<title>Exceptions</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
@@ -19,7 +19,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">Value-Returning Functions</a></h1>
+							<h1><a href="index.html">Exceptions</a></h1>
 						</div>
 
 					<!-- Nav -->
@@ -34,27 +34,25 @@
 
 			<!-- Main -->
 				<section id="main" class="wrapper style2">
-					<div class="title">Value-Returning Functions</div>
+					<div class="title">Exceptions</div>
 					<div class="container">
 						<div class="row gtr-150">
 							<div class="col-4 col-12-medium">
 
 								<!-- Sidebar -->
-									<div id="sidebar">
-										<section class="box">
-											<header>
-												<h2>เนื้อหา Lecture 5</h2>
+								<div id="sidebar">
+									<section class="box">
+										<header>
+											<h2>เนื้อหา Lecture 6</h2>
 										</header>
 										<ul class="style3">
-											<li class="current"><a href="introfunc.html">Introduction to Functions</a></li>
-											<li><a href="design.html">Designing Program Using Functions</a></li>
-											<li><a href="passing.html">Passing Arguments to Functions</a></li>
-											<li><a href="local.html">Local, Global Variables and Global Constants</a></li>
-											<li><a href="value.html">Value-Returning Functions</a></li>
-											<li><a href="storing.html">Storing Functions in Modules</a></li>
-											</ul>
-										</section>
-									</div>
+											<li class="current"><a href="fileinput.html">File Input and Output</a></li>
+											<li><a href="usingloop.html">Using Loop to Process Files</a></li>
+											<li><a href="processingrec.html">Processing Records</a></li>
+											<li><a href="exceptions.html">Exceptions</a></li>
+										</ul>
+									</section>
+								</div>
 							</div>
 							<div class="col-8 col-12-medium imp-medium">
 
@@ -62,26 +60,89 @@
 									<div id="content">
 										<article class="box post">
 											<header class="style1">
-												<h2>Value-Returning Functions</h2>
-												<center class="row aln-center">
-													<a href="#" class="image featured">
-														<img src="/images/value.jpeg" alt="" />
-													</a>
-												</center>
+											<h2>Exceptions</h2>
 											</header>
-											<h2>IPO AND FUNCTION</h2>
 											<center class="row aln-center">
 												<a href="#" class="image featured">
-													<img src="/images/ipo.jpeg" alt="" />
+													<img src="/images/Exception-Handling-in-Python.png" alt="" />
 												</a>
 											</center>
-											<h2>Code Ex</h2>
-											<center class="row aln-center">
-												<a href="#" class="image featured">
-													<img src="/images/recodeex.jpeg" alt="" />
-												</a>
-											</center>
-											
+											<p>• Exception: error that occurs while a program is running <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Usually causes program to abruptly halt <br>
+												• Traceback: error message that gives information regarding line numbers that caused the exception <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Indicates the type of exception and brief description of the error that caused exception to be raised <br>
+											</p>
+											<p>Exception handler: code that responds when exceptions are raised and prevents
+												program from crashing<br>
+												In Python, written as try/except statement<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;General format:<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statements<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except exceptionName:<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statements<br>
+											</p>
+											<p>• Many exceptions can be prevented by careful coding<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Example: input validation <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Usually involve a simple decision construct <br>
+												• Some exceptions cannot be avoided by careful coding<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Examples<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Trying to convert non-numeric string to an integer<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Trying to open for reading a file that doesn't exist<br>
+											</p>
+											<p>• If statement in try suite raises exception:<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Exception specified in except clause:<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Handler immediately following except clause executes<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Continue program after try/except statement<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Other exceptions:<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Program halts with traceback error message<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Trying to open for reading a file that doesn't exist<br>
+												• If no exception is raised, handlers are skipped<br>
+											</p>
+											<h2>HANDLING MULTIPLE EXCEPTIONS</h2>
+											<p>• Often code in try suite can throw more than one type of exception<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Need to write <strong>except</strong> clause for each type of exception that
+												needs to be handled<br>
+												• An except clause that does not list a specific exception will
+												handle any exception that is raised in the try suite <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Should always be last in a series of <strong>except</strong> clauses<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Program halts with traceback error message<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Trying to open for reading a file that doesn't exist<br>
+												• If no exception is raised, handlers are skipped<br>
+											<h2>DISPLAYING AN EXCEPTION'S DEFAULT ERROR MESSAGE</h2>
+											<p>• Exception object: object created in memory when an exception is thrown<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Usually contains default error message pertaining to the exception<br>
+												• An except clause that does not list a specific exception will
+												handle any exception that is raised in the try suite <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Can assign the <strong>exception</strong> object to a variable in an except clause<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Example: <strong>except ValueError as err:</strong><br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Can pass exception object variable to <strong>print</strong> function to display
+												the default error message<br>
+											<h2>THE ELSE CLAUSE</h2>
+												<p>• <strong>try/except</strong> statement may include an optional else clause, which
+													appears after all the except clauses<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;• Aligned with <strong>try</strong> and <strong>except</strong> clauses<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;• Syntax similar to <strong>else</strong> clause in decision structure<br>
+													&nbsp;&nbsp;&nbsp;•Else suite: block of statements executed after statements in try
+													suite, only if no exceptions were raised<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• If exception was raised, the else suite is skipped<br>
+											<h2>THE FINALLY CLAUSE</h2>
+												<p>• try/except statement may include an optional <strong>finally</strong> clause, which appears after all
+													the <strong>except</strong> clauses<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;• Aligned with <strong>try</strong> and <strong>except</strong> clauses<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;• General format:<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>finally:</strong><br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>statements</strong><br>
+													&nbsp;&nbsp;&nbsp;&nbsp;• Finally suite: block of statements after the finally clause<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Execute whether an exception occurs or not<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Purpose is to perform cleanup before exiting<br>
+											<h2>WHAT IF AN EXCEPTION IS NOT HANDLED?</h2>
+												<p>Two ways for exception to go unhandled:<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;• No except clause specifying exception of the right type<br>
+													&nbsp;&nbsp;&nbsp;&nbsp;• Exception raised outside a try suite<br>
+													In both cases, exception will cause the program to halt <br>
+													&nbsp;&nbsp;&nbsp;&nbsp;• Python documentation provides information about
+													exceptions that can be raised by different functions<br>
+
 										</article>
 										<div class="row gtr-150">
 											<div class="col-6 col-12-small">

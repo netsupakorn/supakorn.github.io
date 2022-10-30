@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>LOCAL VARIABLES</title>
+		<title>FILES</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
@@ -19,7 +19,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">LOCAL VARIABLES</a></h1>
+							<h1><a href="index.html">FILES</a></h1>
 						</div>
 
 					<!-- Nav -->
@@ -33,7 +33,7 @@
 
 			<!-- Main -->
 				<section id="main" class="wrapper style2">
-					<div class="title">LOCAL VARIABLES</div>
+					<div class="title">FILES</div>
 					<div class="container">
 						<div class="row gtr-150">
 							<div class="col-4 col-12-medium">
@@ -42,15 +42,13 @@
 								<div id="sidebar">
 									<section class="box">
 										<header>
-											<h2>เนื้อหา Lecture 5</h2>
+											<h2>เนื้อหา Lecture 6</h2>
 										</header>
 										<ul class="style3">
-											<li class="current"><a href="introfunc.html">Introduction to Functions</a></li>
-											<li><a href="design.html">Designing Program Using Functions</a></li>
-											<li><a href="passing.html">Passing Arguments to Functions</a></li>
-											<li><a href="local.html">Local, Global Variables and Global Constants</a></li>
-											<li><a href="value.html">Value-Returning Functions</a></li>
-											<li><a href="storing.html">Storing Functions in Modules</a></li>
+											<li class="current"><a href="fileinput.html">File Input and Output</a></li>
+											<li><a href="usingloop.html">Using Loop to Process Files</a></li>
+											<li><a href="processingrec.html">Processing Records</a></li>
+											<li><a href="exceptions.html">Exceptions</a></li>
 										</ul>
 									</section>
 								</div>
@@ -62,21 +60,47 @@
 									<div id="content">
 										<article class="box post">
 											<header class="style1">
-											<h2>LOCAL VARIABLES</h2>
+											<h2>FILE INPUT/OUTPUT</h2>
 											</header>
-											<p>A local variable is created inside a function and cannot be
-												accessed by statements that are outside the function. Different
-												functions can have local variables with the same names because
-												the functions cannot see each other's local variables.</p>
-												<center class="row aln-center">
-													<a href="#" class="image featured">
-														<img src="/images/local.jpeg" alt=""/>
-													</a>
-												</center>
-											<h2>GLOBAL VARIABLES AND CONSTANTS</h2>
+											<p>• For program to retain data between the times it is run, you must save
+												the data<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Data is saved to a file, typically on computer disk	<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Saved data can be retrieved and used at a later time	<br>
+												• "Writing data to" : saving data on a file<br>
+												• Output file: a file that data is written to<br>
+												• "Reading data from" : process of retrieving data from a file<br>
+												• Input file: a file from which data is read<br>
+											</p>
+											<h2>TYPE OF FILES</h2>
+											<p>In general, two types of files<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;1. Text file: contains data that has been encoded as text<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;2. Binary file: contains data that has not been converted to text
+												Two ways to access data stored in file<br>
+											<p>Two ways to access data stored in file<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;1. Sequential access: file read sequentially from beginning to end,
+												can't skip ahead<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;2. Direct access: can jump directly to any piece of data in the file<br>
+											</p>
+											<p>&nbsp;&nbsp;&nbsp;&nbsp;There are always three steps that must be taken when a file is used by a
+												program.<br>
+												• Open the file - Opening a file creates a connection between the file and the program.
+												Opening an output file usually creates the file on the disk and allows the program to
+												write data to it. Opening an input file allows the program to read data from the file.<br>
+												• Process the file - In this step data is either written to the file (if it is an output file) or read
+												from the file (if it is an input file).<br>
+												• Close the file - When the program is finished using the file, the file must be closed.
+												Closing a file disconnects the file from the program.<br>
+											</p>
+											<h2>Open File</h2>
 											<center class="row aln-center">
 												<a href="#" class="image featured">
-													<img src="/images/global.jpeg" alt=""/>
+													<img src="/images/openfile.jpeg" alt="" style="width:300px;height:300px;"/>
+												</a>
+											</center>
+											<h2>File Mode</h2>
+											<center class="row aln-center">
+												<a href="#" class="image featured">
+													<img src="/images/filemode.jpeg" alt=""/>
 												</a>
 											</center>
 										</p>

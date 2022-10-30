@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>STRING INDEXING</title>
+		<title>List Methods and Useful Built-in Functions</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
@@ -19,7 +19,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">STRING INDEXING</a></h1>
+							<h1><a href="index.html">List Methods and Useful Built-in Functions</a></h1>
 						</div>
 
 					<!-- Nav -->
@@ -34,7 +34,7 @@
 
 			<!-- Main -->
 				<section id="main" class="wrapper style2">
-					<div class="title">STRING INDEXING</div>
+					<div class="title">List Methods </div>
 					<div class="container">
 						<div class="row gtr-150">
 							<div class="col-4 col-12-medium">
@@ -43,16 +43,16 @@
 								<div id="sidebar">
 									<section class="box">
 										<header>
-											<h2>เนื้อหา Lecture 4</h2>
+											<h2>เนื้อหา Lecture 7</h2>
 										</header>
 										<ul class="style3">
-											<li class="current"><a href="string.html">Strings</a></li>
-											<li><a href="indexing.html">String indexing </a></li>
-											<li><a href="slicing.html">String slicing</a></li>
-											<li><a href="formatting.html">String formatting</a></li>
-											<li><a href="len.html">len, string</a></li>
-											<li><a href="methods.html">String Methods</a></li>
-											<li><a href="boolean.html">String Boolean Methods</a></li>
+											<li class="current"><a href="introlist.html">Introduction to lists</a></li>
+											<li><a href="inoperator.html">Operator</a></li>
+											<li><a href="listmethods.html">List Methods and Useful Built-in Functions </a></li>
+											<li><a href="copying.html">Copying and Processing Lists</a></li>
+											<li><a href="twodimen.html">Two dimensional Lists</a></li>
+											<li><a href="tuples.html">Tuples</a></li>
+											<li><a href="mathplot.html">mathplot</a></li>
 										</ul>
 									</section>
 								</div>
@@ -64,20 +64,32 @@
 									<div id="content">
 										<article class="box post">
 											<header class="style1">
-												<h2>STRING INDEXING</h2>
+												<h2>List Methods and Useful Built-in Functions</h2>
 											</header>
-											<a href="#" class="image featured">
-												<img src="/images/index.jpeg" alt="" />
-											</a>
-											<h2>STRING ARE IMMUTABLE</h2>
-											In Python, strings are immutable, which means that once they are created,
-											they cannot be changed. Some operations, such as concatenation, give
-											the impression that they modify strings, but in reality they do not.</h2>
-											 <center class="row aln-center">
-												<a href="#" class="image featured">
-													<img src="/images/immutable.jpeg" alt=""/>
-												</a>
-											</center>
+											<p>• An IndexError exception is raised if an invalid index is used <br>
+												• len function: returns the length of a sequence such as a list <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Example: size = len(my_list)<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Returns the number of elements in the list, so the index of last
+												element is len(list)-1<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Can be used to prevent an IndexError exception when
+												iterating over a list with a loop<br>
+												• You can use the in operator to determine whether an item is contained in a list <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• General format: item in list<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Returns True if the item is in the list, or False if it is not in the list<br>
+												• Similarly you can use the not in operator to determine whether an item is not in a list <br>
+												• append(item): used to add items to a list – item is appended to the end of the existing list <br>
+												• index(item): used to determine where an item is located in a list <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Returns the index of the first element in the list containing item<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Raises ValueError exception if item not in the list<br>
+												• insert(index,item): used to insert item at position index in the list <br>
+												• sort(): used to sort the elements of the list in ascending order<br>
+												• remove(item): removes the first occurrence of item in the list<br>
+												• reverse(): reverses the order of the elements in the list<br>
+												• del statement: removes an element from a specific index in a list <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• General format: del list[i]<br>
+												• min and max functions: built-in functions that returns the item 
+												that has the lowest or highest value in a sequence <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• The sequence is passed as an argument<br>
 											</p>
 										</article>
 										<div class="row gtr-150">
