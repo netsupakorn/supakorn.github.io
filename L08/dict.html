@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>STRING FUNCTION</title>
+		<title>DICTIONARIES</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
@@ -19,7 +19,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">LENGTH FUNCTION</a></h1>
+							<h1><a href="index.html">DICTIONARIES</a></h1>
 						</div>
 
 					<!-- Nav -->
@@ -34,7 +34,7 @@
 
 			<!-- Main -->
 				<section id="main" class="wrapper style2">
-					<div class="title">LENGTH FUNCTION</div>
+					<div class="title">Introduction</div>
 					<div class="container">
 						<div class="row gtr-150">
 							<div class="col-4 col-12-medium">
@@ -43,16 +43,12 @@
 								<div id="sidebar">
 									<section class="box">
 										<header>
-											<h2>เนื้อหา Lecture 4</h2>
+											<h2>เนื้อหา Lecture 8</h2>
 										</header>
 										<ul class="style3">
-											<li class="current"><a href="string.html">Strings</a></li>
-											<li><a href="indexing.html">String indexing </a></li>
-											<li><a href="slicing.html">String slicing</a></li>
-											<li><a href="formatting.html">String formatting</a></li>
-											<li><a href="len.html">len, string</a></li>
-											<li><a href="methods.html">String Methods</a></li>
-											<li><a href="boolean.html">String Boolean Methods</a></li>
+											<li class="current"><a href="dict.html">Dictionaries</a></li>
+											<li><a href="sets.html">Sets</a></li>
+											<li><a href="serial.html">Serialising Objects</a></li>
 										</ul>
 									</section>
 								</div>
@@ -64,28 +60,53 @@
 									<div id="content">
 										<article class="box post">
 											<header class="style1">
-											<h2>LENGTH FUNCTION</h2>
+											<h2>DICTIONARIES</h2>
 											</header>
 											<a href="#" class="image featured">
-												<img src="/images/len.jpg" alt="" />
+												<img src="/images/Dictionary-in-python.jpg" alt="" />
 											</a>
-											<h2>Nesting Function</h2>
-												<center class="row aln-center">
-													<a href="#" class="image featured">
-														<img src="/images/len1.jpeg" alt=""/>
-													</a>
-												</center>
-											<center class="row aln-center">
-												<a href="#" class="image featured">
-													<img src="/images/len2.jpeg" alt=""/>
-												</a>
-											</center>
-											<h2>Code Ex</h2>
-											<center class="row aln-center">
-												<a href="#" class="image featured">
-													<img src="/images/codelenex.jpeg" alt="" />
-												</a>
-											</center>
+											<p>
+												• Dictionary: object that stores a collection of data <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Each element consists of a key and a value<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Often referred to as mapping of key to value<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Key must be an immutable object<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• To retrieve a specific value, use the key associated with it<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Format for creating a dictionary<br>
+												<strong>dictionary = {key1:val1, key2:val2}</strong> 
+											</p>
+											<h2>ADD AND DELETE DICTIONARY</h2>
+											<p>
+												• Dictionaries are mutable objects <br>
+												• To add a new key-value pair: <strong>dictionary[key] = value</strong> 
+												&nbsp;&nbsp;&nbsp;&nbsp;• If key exists in the dictionary, the value associated
+												with it will be changed<br>
+												• To delete a key-value pair: <strong>del dictionary[key]</strong>>
+												&nbsp;&nbsp;&nbsp;&nbsp;• If key is not in the dictionary, KeyError exception is
+												raised<br>
+											</p>
+											<h2>DICTIONARY NUMBER OF ELEMENTS AND MIXING DATA TYPES</h2>
+											<p>
+												• len function: used to obtain number of elements in a dictionary <br>
+												• Keys must be immutable objects, but associated values can be any type of object <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• One dictionary can include keys of several different
+												immutable types<br>
+												• Values stored in a single dictionary can be of different types <br>
+											</p>
+											<h2>CREATING AN EMPTY DICTIONARY AND USING FOR LOOP</h2>
+											<p>
+												• To create an empty dictionary: <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Use {}<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Use built-in function dict()<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Elements can be added to the dictionary as program
+												executes<br>
+												• Use a for loop to iterate over a dictionary <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• General format: for key in dictionary:<br>
+												<strong>for key in dictionary:</strong> 
+											<h2>SOME DICTIONARY METHODS</h2>
+											</p>
+											<a href="#" class="image featured">
+												<img src="/images/methodlddd.jpeg" alt="" />
+											</a>
 										</p>
 										</article>
 										<div class="row gtr-150">

@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>FORMATTING STRING</title>
+		<title>SET</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
@@ -19,7 +19,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">FORMATTING STRING</a></h1>
+							<h1><a href="index.html">SET</a></h1>
 						</div>
 
 					<!-- Nav -->
@@ -34,7 +34,7 @@
 
 			<!-- Main -->
 				<section id="main" class="wrapper style2">
-					<div class="title">FORMATTING STRING</div>
+					<div class="title">SET</div>
 					<div class="container">
 						<div class="row gtr-150">
 							<div class="col-4 col-12-medium">
@@ -43,16 +43,12 @@
 								<div id="sidebar">
 									<section class="box">
 										<header>
-											<h2>เนื้อหา Lecture 4</h2>
+											<h2>เนื้อหา Lecture 8</h2>
 										</header>
 										<ul class="style3">
-											<li class="current"><a href="string.html">Strings</a></li>
-											<li><a href="indexing.html">String indexing </a></li>
-											<li><a href="slicing.html">String slicing</a></li>
-											<li><a href="formatting.html">String formatting</a></li>
-											<li><a href="len.html">len, string</a></li>
-											<li><a href="methods.html">String Methods</a></li>
-											<li><a href="boolean.html">String Boolean Methods</a></li>
+											<li><a href="dict.html">Dictionaries</a></li>
+											<li class="current"><a href="sets.html">Sets</a></li>
+											<li><a href="serial.html">Serialising Objects</a></li>
 										</ul>
 									</section>
 								</div>
@@ -64,48 +60,81 @@
 									<div id="content">
 										<article class="box post">
 											<header class="style1">
-												<h2>FORMATTING STRING</h2>
+											<h2>Set Methods and Useful Built-in Functions</h2>
 											</header>
-											<h2>Code Ex</h2>
-											<center class="row aln-center">
-												<a href="#" class="image featured">
-													<img src="/images/format.jpeg" alt=""/>
-												</a>
-												</center>
-											<h2>Formatting Strings Alignment</h2>
+											<h2>Set</h2>
 											<p>
-												< &nbsp;&nbsp;&nbsp;&nbsp;Left<br>
-												^ &nbsp;&nbsp;&nbsp;&nbsp;Center<br>
-												> &nbsp;&nbsp;&nbsp;&nbsp;Right <br>
-												<h2>Code Ex</h2>
-											<center class="row aln-center">
-												<a href="#" class="image featured">
-													<img src="/images/format2.jpeg" alt=""/>
-												</a>
-											</center>
-											<h2>Formatting Strings - Data Types</h2>
+												• Set: object that stores a collection of data in same
+												way as mathematical set<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• All items must be unique<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Set is unordered<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Elements can be of different data types<br>
+												• len function: returns the number of elements in the set <br>
+												• Sets are mutable objects <br>
+												• add method: adds an element to a set <br>
+												• update method: adds a group of elements to a set <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Argument must be a sequence containing iterable
+												elements, and each of the elements is added to the set<br>
+												• remove and discard methods: remove the specified item from the set <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• The item that should be removed is passed to both methods as
+												an argument <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Behave differently when the specified item is not found in the set<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• remove method raises a KeyError exception<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• discard method does not raise an exception<br>
+												• clear method: clears all the elements of the set <br>
+											<h2>FINDING THE UNION OF SETS</h2>
+												• Union of two sets: a set that contains all the elements of both sets <br>
+												• To find the union of two sets: <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Use the union method<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Format: set1.union(set2)<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Use the | operator<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Format: set1 | set2<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Both techniques return a new set which contains the union of both sets<br>
+											</p>
+											<h2>FINDING THE INTERSECTION OF SETS</h2>
 											<p>
-												f&nbsp;&nbsp;&nbsp;&nbsp; Float<br>
-												.Nf&nbsp;&nbsp;&nbsp;&nbsp; N = The number of decimal places<br>
-												Example<br>
-												&nbsp;&nbsp;&nbsp;&nbsp;{:.2f}<br>
-											<h2>Code Ex</h2>
+												• Intersection of two sets: a set that contains only the elements
+												found in both sets<br>
+												• To find the intersection of two sets: <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Use the intersection method<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Format: set1.intersection(set2)<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Use the & operator<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Format: set1 & set2<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Both techniques return a new set which contains the intersection of
+												both sets<br>
+											</p>
+											<h2>FINDING THE SYMMETRIC DIFFERENCE OF SETS</h2>
+											<p>
+												• Symmetric difference of two sets: a set that contains
+												the elements that are not shared by the two sets <br>
+												• To find the symmetric difference of two sets: <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Use the symmetric_difference method<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Format: set1.symmetric_difference(set2)<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Use the ^ operator<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Format: set1 ^ set2<br>
+											</p>
+											<h2>FINDING SUBSETS AND SUPERSETS</h2>
+											<p>
+												• Set A is subset of set B if all the elements in set A are included in set B <br>
+												• To determine whether set A is subset of set B <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Use the issubset method<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Format: setA.issubset(setB)<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Use the <= operator<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Format: setA <= setB<br>
+												• Set A is superset of set B if it contains all the elements of set B <br>
+												• To determine whether set A is superset of set B <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Use the issuperset method<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Format: setA.issuperset(setB)<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Use the >= operator<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Format: setA >= setB<br>
+											</p>
+											<h2>SET OPERATION</h2>
 											<center class="row aln-center">
 												<a href="#" class="image featured">
-													<img src="/images/format3.jpeg" alt=""/>
+													<img src="/images/setoper.jpeg" alt=""/>
 												</a>
 											</center>
-											<center class="row aln-center">
-												<a href="#" class="image featured">
-													<img src="/images/methoddd.jpeg" alt=""/>
-												</a>
-											</center>
-											<h2>SEARCH AND REPLACE METHODS</h2>
-											<center class="row aln-center">
-												<a href="#" class="image featured">
-													<img src="/images/sar.jpeg" alt=""/>
-												</a>
-											</center>
+											
 										</article>
 										<div class="row gtr-150">
 											<div class="col-6 col-12-small">

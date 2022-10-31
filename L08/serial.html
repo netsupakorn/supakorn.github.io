@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>STRING BOOLEAN METHODS</title>
+		<title>SERIALIZING OBJECTS</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
@@ -19,7 +19,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">STRING BOOLEAN METHODS</a></h1>
+							<h1><a href="index.html">SERIALIZING OBJECTS</a></h1>
 						</div>
 
 					<!-- Nav -->
@@ -34,7 +34,7 @@
 
 			<!-- Main -->
 				<section id="main" class="wrapper style2">
-					<div class="title">STRING BOOLEAN METHODS</div>
+					<div class="title">SERIALIZING OBJECTS</div>
 					<div class="container">
 						<div class="row gtr-150">
 							<div class="col-4 col-12-medium">
@@ -43,16 +43,12 @@
 								<div id="sidebar">
 									<section class="box">
 										<header>
-											<h2>เนื้อหา Lecture 4</h2>
+											<h2>เนื้อหา Lecture 8</h2>
 										</header>
 										<ul class="style3">
-											<li class="current"><a href="string.html">Strings</a></li>
-											<li><a href="indexing.html">String indexing </a></li>
-											<li><a href="slicing.html">String slicing</a></li>
-											<li><a href="formatting.html">String formatting</a></li>
-											<li><a href="len.html">len, string</a></li>
-											<li><a href="methods.html">String Methods</a></li>
-											<li><a href="boolean.html">String Boolean Methods</a></li>
+											<li><a href="dict.html">Dictionaries</a></li>
+											<li><a href="sets.html">Sets</a></li>
+											<li class="current"><a href="serial.html">Serialising Objects</a></li>
 										</ul>
 									</section>
 								</div>
@@ -64,11 +60,28 @@
 									<div id="content">
 										<article class="box post">
 											<header class="style1">
-												<h2>STRING BOOLEAN METHODS</h2>
+												<h2>Serializing Objects</h2>
 											</header>
-											<a href="#" class="image featured">
-												<img src="/images/boo.jpeg" alt="" />
-											</a>
+											<p>
+												• Serialize an object: convert the object to a stream of
+												bytes that can easily be stored in a file <br>
+												• Pickling: serializing an object <br>
+												• To pickle an object: <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Import the pickle module<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Open a file for binary writing<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Call the pickle.dump function<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Format: pickle.dump(object, file)<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Close the file<br>
+												• You can pickle multiple objects to one file prior to closing the file <br>
+												• Unpickling: retrieving pickled object <br>
+												• To unpickle an object: <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Import the pickle module<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Open a file for binary writing<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Call the pickle.load function<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Format: pickle.load(file)<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;• Close the file<br>
+												• You can unpickle multiple objects from the file <br>
+											</p>
 											<p>
 										</article>
 										<div class="row gtr-150">
